@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio web </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(hsl(180, 94%, 33%));
+            padding: 1rem 0;
+            text-align: center;
+
+            color: white;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            background: #1a1a1d;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            background: #c3e6ea;
+            color: #0a0a0a;
+            border-radius: 5px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem;
+            background: linear-gradient(hsl(180, 94%, 33%) );
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero a {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: white;
+            color: #0a0a0a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .hero a:hover {
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #9adcf9;
+            margin-bottom: 1rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #1a1a1d;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card .content {
+            padding: 1rem;
+        }
+
+        .project-card h3 {
+            margin: 0 0 0.5rem;
+        }
+
+        footer {
+            background: #1a1a1d;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ff6ec4;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .name-container {
+            display: flex;
+            align-items: center;
+            gap: 500px; /* Space between image and name */
+        }
+        .name-container img {
+            width: 250px; /* Adjust image size */
+            height: 250px;
+            border-radius: 100%; /* Makes the image circular */
+            object-fit: cover;
+        }
+        @media (max-width: 1024px) {
+    .name-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .name-container img {
+        width: 150px; /* Smaller size for mobile and tablets */
+        height: 150px;
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: flex;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    .projects {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; 
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Smaller text for footer */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1rem; /* Even smaller font size for very small screens */
+    }
+
+    .container {
+        padding: 0 0.5rem; /* Reduce padding */
+    }
+
+    .section h2 {
+        font-size: 1.8rem; /* Adjust section heading size */
+    }
+}
+.section img{
+     width: 30px;
+     height: 30px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        PORTFOLIO
+    </header>
+
+    <nav>
+        <a href="skill.html">SKILL & ACHIEVEMENTS</a>
+        <a href="intern.html">INTERN & ACTIVITIES</a>
+        <a href="certificate.html">CERTIFICATE</a>
+    </nav>
+
+    <div class="hero">
+        <div class="name-container">
+        <h1>SHANMUGAPRIYAN V</h1>
+        <img src="https://postimage.me/images/2025/05/11/104f7fc4d0226d340.jpg">
+    </div>
+    </div>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>OBJECTIVE</h2>
+            <p>To make optimum utilization of my knowledge and skill, Utilize the opportunities effectively for professional growth and to contribute in the best possible way for the betterment for the organization and self. </p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Educational Qualifications</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <div class="content">
+                        <h3>MBA</h3>
+                        <p>Hindustan College of Engineering & Technology</p>
+                        <p>Anna University</p>
+                        <p>Batch(2024-2026)</p>
+                        <p>CGPA:8.5</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="content">
+                        <h3>B.COM</h3>
+                        <p>SRM Trichy Arts & Science College</p>
+                        <p>Bharathidasan University</p>
+                        <p>Batch(2021-2024)</p>
+                        <p>CGPA:7.2</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="content">
+                        <h3>HSC</h3>
+                        <p>SAIRAM Matric.Hr.Sec. School</p>
+                        <p>State Board of Tamilnadu</p>
+                        <p>Percentage:78.22%</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="content">
+                        <h3>SSLC</h3>
+                        <p>SAIRAM Matric.Hr.Sec. School</p>
+                        <p>State Board of Tamilnadu</p>
+                        <p>Percentage:75%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p> <img src="https://postimage.me/images/2025/05/12/icons8-home-address-48.png" alt="Address Icon">Address:40/D, Vedai road ,<br>Thiruthuraipoondi,<br>Thiruvarur-614713</p>
+            <p><img src="https://postimage.me/images/2025/05/12/icons8-phone-64.png" alt="Phone Icon">Mobile:9080702602</p>
+            <p><img src="https://postimage.me/images/2025/05/12/icons8-send-email-48.png" alt="Email Icon">Email:<a href="mailto:shanmugapriyanvsp@gmail.com?subject=Hello%20Shanmugapriyan&body=Hi%20Shanmugapriyan,%20I%20wanted%20to%20reach%20out%20to%20you%20about...">
+                Shanmugapriyan
+            </a></p>
+            <p><img src="https://postimage.me/images/2025/05/12/icons8-linkedin-48.png">Shanmugapriyan</a></p>
+        </section>
+    </div>
+</body>
+</html>
